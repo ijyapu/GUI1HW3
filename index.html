@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+ File: index.html
+ Assignment: Dynamic Interactive Table
+ Bikash Shrestha, UMass Lowell Computer Science, Bikash_Shrestha@student.uml.edu
+ Copyright (c) 2023 by Bikash Shrestha. All rights reserved. It May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by BS on June 16, 2023, at 8:00 PM.
+ Instructor: Professor Wenjin Zhou
+ Help: w3 Schools/ Stack Overflow / mdn web docs
+ Basic Description: This is the third assignment where we use JavaScript in addition to HTML and CSS to create the interactive multiplication table. 
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id = "content">
+            <header> Multiplication Table</header>
+            <!--Reference: https://www.w3schools.com/html/html_forms.asp-->
+            <form>
+                <div class = "form">
+                    <h4>Input Section &darr;</h4>
+                    <!--Reference: https://stackoverflow.com/questions/31706611/why-does-the-html-input-with-type-number-allow-the-letter-e-to-be-entered-in-->
+                    <label for = "rowmin">Minimum Row Value:</label><br>
+                    <input type = "number" onkeydown="return event.keyCode !== 69"  id="rowmin" placeholder = "Enter an integer">  
+                    <label for = "rowmax">Maximum Row Value:</label><br>
+                    <input type = "number" onkeydown="return event.keyCode !== 69" id = "rowmax" placeholder = "Enter an integer">
+                    <label for = "colmin">Minimum Column Value:</label><br>
+                    <input type = "number" onkeydown="return event.keyCode !== 69" id = "colmin" placeholder = "Enter an integer">
+                    <label for = "colmin">Maximum Column Value:</label><br>
+                    <input type = "number" onkeydown="return event.keyCode !== 69" id = "colmax" placeholder = "Enter an integer"><br>
+                    <button type = "button" class="btn btn-primary mt-2 ml-3" id = "submit-btn">Submit</button>
+                    <button type = "button" class="btn btn-primary mt-2" id = "clear-btn" onclick="clr()">Clear</button>
+                </div>
+            </form>
+            <div id="table-content"></div>
+            <script src="js/script.js"></script>
+        </div>
+    </body>
+</html>

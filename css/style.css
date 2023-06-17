@@ -1,1 +1,114 @@
+/*
+ File: style.css
+ Assignment: Dynamic Interactive Table
+ Bikash Shrestha, UMass Lowell Computer Science, Bikash_Shrestha@student.uml.edu
+ Copyright (c) 2023 by Bikash Shrestha. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by BS on June 16, 2023, at 8:00 PM.
+ Instructor: Professor Wenjin Zhou
+ Help: w3 Schools/ Stack Overflow / mdn web docs
+ Basic Description: This is the third assignment where we use JavaScript in addition to HTML and CSS to create the interactive multiplication table. 
+*/
 
+/*background of the whole page */
+body {
+  background-image: linear-gradient(to bottom right, darkgreen, ivory);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Content container styles */
+#content {
+  display: grid;
+  width: 100%;
+  height: 1000px;
+  padding: 3px;
+  grid-template-columns: 200px 10px 1fr 1fr 10px;
+  grid-template-rows: 40px 10px 1fr 1fr 10px;
+}
+
+/*table content styles */
+#table-content {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  overflow: scroll;
+  width: 82vw;
+}
+
+/* Form styles */
+form {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-start: span 5;
+  background: limegreen;
+  color: white;
+  float: left;
+}
+
+/* header styles */
+header {
+  font-size: 30px;
+  padding-bottom: 2px;
+  background:yellowgreen;
+  grid-column-start: 1;
+  grid-column-end: span 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+
+/* h4 element styles */
+h4{
+  color: black;
+  text-align: center;
+}
+
+/* table styles */
+table {
+  background: lightgrey;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+}
+
+
+/* table cells and rows styles */
+td, tr {
+  border: 1px solid black;
+  padding: 2px;
+  text-align: center;
+}
+
+/* first cell in the first row styles */
+tr:first-child td:first-child {
+  background: beige;
+  border: 2px solid beige;
+}
+
+/* first cell in the first row */
+td:first-child {
+  background: teal;
+  color: gold;
+  border-top: 2px solid goldenrod;
+}
+
+/* first row cells, excluding the first cell styles */
+tr:first-child td{
+  background: teal;
+  color: gold;
+  border-right: 2px solid goldenrod;
+}
+
+/* last cell of the first row style */
+tr:first-child td:last-child{
+  border-right: 1px solid black;
+}
+
+/* alternate cells style */
+td:nth-child(2n){
+  background: white;
+}
